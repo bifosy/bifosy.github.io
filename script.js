@@ -45,7 +45,6 @@ function updateUpgrades() {
     upgrade1Button.disabled = score < 10;
     upgrade2Button.disabled = score < 50;
     upgrade3Button.disabled = score < 100;
-    upgrade4Button.disabled = score < 200;
 }
 
 // Função para mostrar confete
