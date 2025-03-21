@@ -39,7 +39,7 @@ button {
     border: none;
     border-radius: 5px;
 }
-/* Adicionar esta seção ao final do arquivo styles.css */
+
 .confetti-container {
     position: fixed;
     top: 0;
@@ -68,6 +68,7 @@ button {
         opacity: 0;
     }
 }
+
 .upgrade-button:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
