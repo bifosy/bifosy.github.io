@@ -28,6 +28,9 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
+    /* Adicionar tamanho reduzido para a imagem do clicker */
+    width: 50px; /* Ajuste conforme necessário */
+    height: 50px; /* Ajuste conforme necessário */
 }
 
 .upgrade-button {
