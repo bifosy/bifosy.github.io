@@ -10,6 +10,7 @@ const upgrade3Button = document.getElementById('upgrade3');
 clickerButton.addEventListener('click', () => {
     score += clickValue;
     scoreDisplay.textContent = score;
+    showConfetti(); // Função para mostrar confete
     updateUpgrades();
 });
 
@@ -44,6 +45,26 @@ function updateUpgrades() {
     upgrade1Button.disabled = score < 10;
     upgrade2Button.disabled = score < 50;
     upgrade3Button.disabled = score < 100;
+    upgrade4Button.disabled = score < 200;
+}
+
+// Função para mostrar confete
+function showConfetti() {
+    const confettiContainer = document.createElement('div');
+    confettiContainer.classList.add('confetti-container');
+    document.body.appendChild(confettiContainer);
+
+    for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.style.left = `${Math.random() * 100}%`;
+        confetti.style.animationDelay = `${Math.random() * 2}s`;
+        confettiContainer.appendChild(confetti);
+    }
+
+    setTimeout(() => {
+        confettiContainer.remove();
+    }, 3000);
 }
 
 // Initial call to set the correct state of upgrade buttons
